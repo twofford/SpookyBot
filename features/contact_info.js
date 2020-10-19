@@ -11,6 +11,7 @@ const { BotkitConversation } = require('botkit');
 const resume = require("../public/assets/resume.json");
 
 module.exports = function (controller) {
+  //Answers to questions related to contact information
   controller.hears('all contact info', ['message'], async (bot, message) => {
     await bot.reply(message, `Call me at ${resume.basics.phone}`);
     await bot.reply(message, `Email me at ${resume.basics.email}`);
@@ -29,6 +30,7 @@ module.exports = function (controller) {
     await bot.reply(message, `${resume.basics.summary}`);
   });
 
+  //Creates an instance of a conversation for dialog tree
   const contactInfo = new BotkitConversation('contactInfo', controller);
 
   // create a path for when a user says YES
