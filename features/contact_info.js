@@ -1,12 +1,6 @@
 /**
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Licensed under the MIT License.
- */
-
-/**
-* This module demonstrates the use of the typing indicator in a conversation, and when using bot.reply
-* Tell your bot "typing dialog" or "typing reply" to see this in action.
-*/
+This module allows a user to get contact information about the app's creator
+**/
 const { BotkitConversation } = require('botkit');
 const resume = require("../public/assets/resume.json");
 
@@ -19,8 +13,10 @@ module.exports = function (controller) {
   const contactAddress = `${resume.basics.location.city}, ${resume.basics.location.region}, ${resume.basics.location.countryCode}`;
   const contactSummary = `${resume.basics.summary}`;
 
+  //Bot listeners
   controller.hears('all contact info', ['message'], async (bot, message) => {
     await bot.reply(message, `<p>Here's a few of the places where you can reach me:</p><ul><li>Phone: ${contactPhone}</li><li>Email: ${contactEmail}</li><li>LinkedIn: ${contactLinkedIn}</li><li>Github: ${contactGithub}</li><li>Location: ${contactAddress}</li></ul><p>Looking forward to connecting!</p>`);
+    await bot.cancelAllDialogs();
   });
   controller.hears(new RegExp(/phone|call/i), ['message'], async (bot, message) => {
     await bot.reply(message, `Call or text me at ${contactPhone}`);
@@ -123,6 +119,6 @@ module.exports = function (controller) {
 
   controller.addDialog(contactInfo);
   controller.hears(new RegExp(/contact/), ['message', 'direct_message'], async (bot, message) => {
-    bot.beginDialog('contactInfo');
+    await bot.beginDialog('contactInfo');
   });
 };
