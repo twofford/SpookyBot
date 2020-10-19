@@ -12,22 +12,33 @@ const resume = require("../public/assets/resume.json");
 
 module.exports = function (controller) {
   //Answers to questions related to contact information
+  const contactPhone = `<a href="tel:+1${resume.basics.phone}">${resume.basics.phone}</a>`;
+  const contactEmail = `<a href="mailto:${resume.basics.email}" target="_blank">${resume.basics.email}</a>`;
+  const contactLinkedIn = `<a href="${resume.profiles.filter(profile => profile.network === "LinkedIn")[0].url}" target="_blank">LinkedIn</a>`;
+  const contactGithub = `<a href="${resume.profiles.filter(profile => profile.network === "Github")[0].url}" target="_blank">Github</a>`;
+  const contactAddress = `${resume.basics.location.city}, ${resume.basics.location.region}, ${resume.basics.location.countryCode}`;
+  const contactSummary = `${resume.basics.summary}`;
+
   controller.hears('all contact info', ['message'], async (bot, message) => {
-    await bot.reply(message, `Call me at ${resume.basics.phone}`);
-    await bot.reply(message, `Email me at ${resume.basics.email}`);
-    await bot.reply(message, `I live in ${resume.basics.location.city}, ${resume.basics.location.region}, ${resume.basics.location.countryCode}. Let's get coffee sometime!`);
+    await bot.reply(message, `<p>Here's a few of the places where you can reach me:</p><ul><li>Phone: ${contactPhone}</li><li>Email: ${contactEmail}</li><li>LinkedIn: ${contactLinkedIn}</li><li>Github: ${contactGithub}</li><li>Location: ${contactAddress}</li></ul><p>Looking forward to connecting!</p>`);
   });
   controller.hears(new RegExp(/phone|call/i), ['message'], async (bot, message) => {
-    await bot.reply(message, `Call me at ${resume.basics.phone}`);
+    await bot.reply(message, `Call or text me at ${contactPhone}`);
   });
   controller.hears(new RegExp(/email/i), ['message'], async (bot, message) => {
-    await bot.reply(message, `Email me at ${resume.basics.email}`);
+    await bot.reply(message, `Email me at ${contactEmail}`);
+  });
+  controller.hears(new RegExp(/git/i), ['message'], async (bot, message) => {
+    await bot.reply(message, `Check out my projects on ${contactGithub}`);
+  });
+  controller.hears(new RegExp(/linkedin/i), ['message'], async (bot, message) => {
+    await bot.reply(message, `Connect with me on ${contactLinkedIn}`);
   });
   controller.hears(new RegExp(/address|live/i), ['message'], async (bot, message) => {
-    await bot.reply(message, `I live in ${resume.basics.location.city}, ${resume.basics.location.region}, ${resume.basics.location.countryCode}. Let's get coffee sometime!`);
+    await bot.reply(message, `I live at ${contactAddress}. Let's get coffee some time!`);
   });
-  controller.hears(new RegExp(/summary|^tell me about yourself$/i), ['message'], async (bot, message) => {
-    await bot.reply(message, `${resume.basics.summary}`);
+  controller.hears(new RegExp(/summary|about yourself|who are you/i), ['message'], async (bot, message) => {
+    await bot.reply(message, contactSummary);
   });
 
   //Creates an instance of a conversation for dialog tree
@@ -50,8 +61,16 @@ module.exports = function (controller) {
         payload: "email"
       },
       {
+        title: "Linkedin",
+        payload: "linkedin"
+      },
+      {
+        title: "Github",
+        payload: "github"
+      },
+      {
         title: "Address",
-        payload: "address",
+        payload: "address"
       },
     ]
   }, 'yes_thread');
