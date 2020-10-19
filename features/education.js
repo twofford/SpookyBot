@@ -1,6 +1,6 @@
 // Sections to include: 1. Institution 2. Dates attended 3. Degree 4. Focus 5. Notes 5. GPA
 
-const resume = require("../public/assets/resume-ezra.json");
+const resume = require("../public/assets/resume.json");
 
 module.exports = function (controller) {
 
