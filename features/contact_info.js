@@ -8,8 +8,8 @@ module.exports = function (controller) {
   //Answers to questions related to contact information
   const contactPhone = `<a href="tel:+1${resume.basics.phone}">${resume.basics.phone}</a>`;
   const contactEmail = `<a href="mailto:${resume.basics.email}" target="_blank">${resume.basics.email}</a>`;
-  const contactLinkedIn = `<a href="${resume.profiles.filter(profile => profile.network === "LinkedIn")[0].url}" target="_blank">LinkedIn</a>`;
-  const contactGithub = `<a href="${resume.profiles.filter(profile => profile.network === "Github")[0].url}" target="_blank">Github</a>`;
+  const contactLinkedIn = `<a href="${resume.basics.profiles.filter(profile => profile.network === "LinkedIn")[0].url}" target="_blank">LinkedIn</a>`;
+  const contactGithub = `<a href="${resume.basics.profiles.filter(profile => profile.network === "Github")[0].url}" target="_blank">Github</a>`;
   const contactAddress = `${resume.basics.location.city}, ${resume.basics.location.region}, ${resume.basics.location.countryCode}`;
   const contactSummary = `${resume.basics.summary}`;
 
