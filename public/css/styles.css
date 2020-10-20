@@ -123,12 +123,18 @@ a.button:hover {
 
 /* chat client */
 #message_window {
+  margin-top: 5px;
+  /* border-radius: 5px;; */
   background: #FFFFFF;
   border-left: 1px solid #CCC;
   border-right: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  /* box-shadow: 5px 5px #ccc; */
+  /* width: 50%; */
   /*height: 500px;
-  width: 320px;*/
-  height: 99%;
+  width: 320px; */
+  /* height: 100%; */
   width: 100%;
   /*margin: 2rem auto;*/
   display: flex;

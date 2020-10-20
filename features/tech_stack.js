@@ -1,4 +1,4 @@
-const resume = require("../public/assets/resume_taylor.json");
+const resume = require("../public/assets/resume.json");
 
 module.exports = function(controller){
 
