@@ -10,12 +10,14 @@ html {
   font-size: 18px;
   background-color: #FFF;
   font-family: "helvetica", sans-serif;
+  background: black;
 }
 
 .wrapper {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
 }
 .wrapper:after {
   content: "";
@@ -132,6 +134,7 @@ a.button:hover {
   display: flex;
   flex-direction: column;
   font-family: "helvetica", sans-serif;
+  background-color: black;
 }
 #message_window .disconnected {
   background: #FFFFCC;
@@ -247,8 +250,8 @@ a.button:hover {
 }
 #message_window .message.outgoing {
   float: right;
-  background: #a795ef;
-  color: white;
+  background: white;
+  color: black;
 }
 #message_window #message_replies {
   text-align: center;
@@ -270,16 +273,16 @@ a.button:hover {
 #message_window #message_replies a {
   text-decoration: none;
   display: block;
-  border: 1px solid #a795ef;
-  color: #a795ef;
+  border: 1px solid white;
+  color: white;
   border-radius: 16px;
   padding: 0.25rem 1rem;
   font-size: 14px;
   cursor: pointer;
 }
 #message_window #message_replies a:hover {
-  background: #a795ef;
-  color: #FFF;
+  background: white;
+  color: black;
 }
 
 /* typing indicator CSS based on code by Joseph Fusco -> https://codepen.io/fusco/pen/XbpaYv */
@@ -340,6 +343,10 @@ a.button:hover {
 
 #welcome {
   margin-left: 440px;
+}
+
+#send-button {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

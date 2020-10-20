@@ -1,23 +1,20 @@
 <html>
     <head>
-        <title>Botkit Anywhere</title>
+        <title>SpookyBot</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
         <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
         <link rel="stylesheet" href="/css/styles.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body >
-      <div class="wrapper">
-
+      <div class="wrapper container">
+        <img src="assets/ezgif.com-gif-maker.gif" />
         <div id="message_window">
             <div class="disconnected">
-                Disconnected... reconnecting!
+                You're disconnected...trying to reconnect.
             </div>
             <div class="offline">
-                Offline! Reload to reconnect.
-            </div>
-            <div class="powered_by">
-              Powered by <a href="https://botkit.ai" target="_blank" title="Building Blocks for Building Bots"><img src="/botkit_icon.png" width="15" height="15" alt="Botkit Logo" /> Botkit</a>
+                You're offline. Refresh your browser to connect!
             </div>
             <section>
                 <div id="message_list">
@@ -52,12 +49,19 @@
             </div>
             <footer>
                 <form onsubmit="Botkit.send(Botkit.input.value, event)">
-                    <input type="text" autocomplete="off" id="messenger_input" placeholder="Type here..." />
-                    <button type="submit">Send</button>
+                    <input type="text" autocomplete="off" id="messenger_input" placeholder="Send a spooky message..." />
+                    <button id="send-button" type="submit">Send</button>
                 </form>
             </footer>
         </div>
+        <img src="assets/ezgif.com-gif-maker.gif" />
         </div>
         <script src="/client.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
     </body>
 </html>
