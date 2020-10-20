@@ -342,7 +342,6 @@ var Botkit = {
 
         var that = this;
 
-
         that.message_window = document.getElementById("message_window");
 
         that.message_list = document.getElementById("message_list");
@@ -353,6 +352,27 @@ var Botkit = {
         that.replies = document.getElementById('message_replies');
 
         that.input = document.getElementById('messenger_input');
+
+        //Call to action buttons send a message by default on behalf of the user
+        that.contactCallToAction = document.getElementById('call_to_action_contact');
+        that.contactCallToAction.addEventListener('click', function () {
+            that.send('contact');
+        });
+
+        that.contactCallToAction = document.getElementById('call_to_action_education');
+        that.contactCallToAction.addEventListener('click', function () {
+            that.send('education');
+        });
+
+        that.contactCallToAction = document.getElementById('call_to_action_job_history');
+        that.contactCallToAction.addEventListener('click', function () {
+            that.send('job history');
+        });
+
+        that.contactCallToAction = document.getElementById('call_to_action_skills');
+        that.contactCallToAction.addEventListener('click', function () {
+            that.send('skills');
+        });
 
         that.focus();
 

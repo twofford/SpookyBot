@@ -128,7 +128,7 @@ a.button:hover {
   border-right: 1px solid #CCC;
   /*height: 500px;
   width: 320px;*/
-  height: 100%;
+  height: 99%;
   width: 100%;
   /*margin: 2rem auto;*/
   display: flex;
@@ -191,7 +191,7 @@ a.button:hover {
   outline: none;
   border: none;
 }
-#message_window footer button {
+#message_window footer form button {
   width: 50px;
   background: none;
   border: 0;
@@ -279,10 +279,49 @@ a.button:hover {
   padding: 0.25rem 1rem;
   font-size: 14px;
   cursor: pointer;
+  outline: none;
 }
 #message_window #message_replies a:hover {
   background: white;
   color: black;
+}
+
+#message_window #message_replies a:focus {
+  box-shadow: 0 0 0 1pt blue; 
+}
+
+#call_to_action {
+  display: flex;
+  justify-content: center;
+}
+
+#call_to_action ul {
+  list-style-type: none;
+  margin: 0px auto;
+  padding: 0;
+}
+#call_to_action ul li {
+  display: inline-block;
+  margin: 0.5rem;
+  margin-left: 0;
+}
+#call_to_action button {
+  text-decoration: none;
+  display: block;
+  border: 1px solid #a795ef;
+  color: #a795ef;
+  border-radius: 16px;
+  padding: 0.25rem 1rem;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+#call_to_action button:hover {
+  background: #a795ef;
+  color: #FFF;
+}
+#call_to_action button:focus {
+  box-shadow: 0 0 0 1pt blue; 
 }
 
 /* typing indicator CSS based on code by Joseph Fusco -> https://codepen.io/fusco/pen/XbpaYv */
