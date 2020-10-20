@@ -40,9 +40,10 @@ module.exports = function (controller) {
   //Creates an instance of a conversation for dialog tree
   const contactInfo = new BotkitConversation('contactInfo', controller);
 
+
   // create a path for when a user says YES
   contactInfo.addMessage({
-    text: 'Great! Select from one of these options:',
+    text: 'Happy to help! Please select from one of these contact options:',
     quick_replies: [
       {
         title: "All",
