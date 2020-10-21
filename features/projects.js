@@ -16,7 +16,7 @@ module.exports = function (controller) {
         })
     });
 
-    resume.education.forEach(name => {
+    resume.projects.forEach(name => {
         // let place = new RegExp(name.institution)
         let place = name.institution
         let partial = name.institution.split(' ')[0]

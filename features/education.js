@@ -8,14 +8,6 @@ module.exports = function (controller) {
     const quick_replies_institutions = [];
     
     resume.education.forEach(name => {
-        institutions.push(name.institution)
-        quick_replies_institutions.push({
-            title: `${name.institution}`,
-            payload: `${name.institution}`
-        })
-    });
-    
-    resume.education.forEach(name => {
         // let place = new RegExp(name.institution)
         let place = name.institution
         let partial = name.institution.split(' ')[0]
@@ -27,6 +19,10 @@ module.exports = function (controller) {
             await bot.reply(message, `${firstName} attended ${name.institution} from 
             ${name.startDate} to ${name.endDate}. They pursued a ${name.studyType} for ${name.area}.`);
         });
+        quick_replies_institutions.push({
+            title: `${name.institution}`,
+            payload: `${name.institution}`
+        })
     });
 
     controller.hears(new RegExp(/education|college|school|bootcamp|boot/, "i"), ['message'], async (bot, message) => {
