@@ -1,5 +1,3 @@
-// Sections to include: 1. Institution 2. Dates attended 3. Degree and Focus 4. Notes
-
 const resume = require("../public/assets/resume.json");
 const firstName = resume.basics.name.split(' ')[0]
 
