@@ -7,7 +7,7 @@ const resume = require("../public/assets/resume.json");
 
 module.exports = function (controller) {
   //Answers to questions related to contact information
-  const workHistory = resume.work; 
+  const workHistory = resume.work;
   //Bot listeners
   controller.hears('all jobs info', ['message'], async (bot, message) => {
     const workMarkup = workHistory.map(job => {
