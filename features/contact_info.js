@@ -5,8 +5,8 @@ const { BotkitConversation } = require('botkit');
 const resume = require("../public/assets/resume.json");
 
 module.exports = function (controller) {
-  console.log(resume.basics.profiles.filter(profile => profile.network === "LinkedIn")[0].url)
   //Answers to questions related to contact information
+  const firstName = resume.basics.name.split(' ')[0];
   const contactPhone = `<a href="tel:+1${resume.basics.phone}">${resume.basics.phone}</a>`;
   const contactEmail = `<a href="mailto:${resume.basics.email}" target="_blank">${resume.basics.email}</a>`;
   const contactLinkedIn = `<a href="${resume.basics.profiles.filter(profile => profile.network === "LinkedIn")[0].url}" target="_blank">LinkedIn</a>`;
@@ -16,25 +16,34 @@ module.exports = function (controller) {
 
   //Bot listeners
   controller.hears('all contact info', ['message'], async (bot, message) => {
-    await bot.reply(message, `<p>Here's a few of the places where you can reach me:</p><ul><li>Phone: ${contactPhone}</li><li>Email: ${contactEmail}</li><li>LinkedIn: ${contactLinkedIn}</li><li>Github: ${contactGithub}</li><li>Location: ${contactAddress}</li></ul><p>Looking forward to connecting!</p>`);
+    await bot.reply(message, `<p>Here are a few places where you can reach ${firstName}:</p><ul><li>Phone: ${contactPhone}</li><li>Email: ${contactEmail}</li><li>LinkedIn: ${contactLinkedIn}</li><li>Github: ${contactGithub}</li><li>Location: ${contactAddress}</li></ul><p>Hope you have a spooky good time connecting!</p>`);
     await bot.cancelAllDialogs();
   });
   controller.hears(new RegExp(/phone|call/i), ['message'], async (bot, message) => {
-    await bot.reply(message, `Call or text me at ${contactPhone}`);
+    await bot.reply(message, `Call or text ${firstName} at ${contactPhone}`);
   });
   controller.hears(new RegExp(/email/i), ['message'], async (bot, message) => {
-    await bot.reply(message, `Email me at ${contactEmail}`);
+    await bot.reply(message, `Email ${firstName} at ${contactEmail}`);
   });
   controller.hears(new RegExp(/git/i), ['message'], async (bot, message) => {
-    await bot.reply(message, `Check out my projects on ${contactGithub}`);
+    await bot.reply(message, `Check out ${firstName}\'s projects on ${contactGithub}`);
   });
   controller.hears(new RegExp(/linkedin/i), ['message'], async (bot, message) => {
-    await bot.reply(message, `Connect with me on ${contactLinkedIn}`);
+    await bot.reply(message, `Connect with ${firstName} on ${contactLinkedIn}`);
   });
   controller.hears(new RegExp(/address|live/i), ['message'], async (bot, message) => {
-    await bot.reply(message, `I live at ${contactAddress}. Let's get coffee some time!`);
+    await bot.reply(message, `${firstName} lives in ${contactAddress}. Trick or Treat!`);
   });
-  controller.hears(new RegExp(/summary|about yourself|who are you/i), ['message'], async (bot, message) => {
+  controller.hears(new RegExp('summary'), ['message'], async (bot, message) => {
+    await bot.reply(message, `Certainly! Here\'s what ${firstName} has to say`);
+    await bot.reply(message, contactSummary);
+  });
+  controller.hears(new RegExp(`about ${firstName}`, 'i'), ['message'], async (bot, message) => {
+    await bot.reply(message, `Certainly! Here\'s what ${firstName} has to say`);
+    await bot.reply(message, contactSummary);
+  });
+  controller.hears(new RegExp(`who is ${firstName}`, 'i'), ['message'], async (bot, message) => {
+    await bot.reply(message, `Certainly! Here\'s what ${firstName} has to say`);
     await bot.reply(message, contactSummary);
   });
 
@@ -87,7 +96,7 @@ module.exports = function (controller) {
 
 
   contactInfo.ask({
-    text: 'Would you like to contact me?',
+    text: `Would you like to contact ${firstName}?`,
     quick_replies: [
       {
         title: "Yes",
