@@ -15,7 +15,7 @@ html {
 
 .wrapper {
   position: relative;
-  max-width: 1000px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
 }
@@ -328,6 +328,32 @@ a.button:hover {
 }
 #call_to_action button:focus {
   box-shadow: 0 0 0 1pt blue; 
+}
+
+.work_history {
+  padding-left: 0;
+  color: #1a202c;
+}
+.work_history > li > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 6px;
+}
+.work_history h2 {
+  font-size: 16px;
+  padding: 0;
+  margin: -3px;
+}
+.work_history h3 {
+  margin-left: 1px;
+  margin-top: -2px;
+  font-size: 14px;
+  color: #718096;
+}
+.work_history > li {
+  list-style-type: none;
+  border-bottom: 1px solid black;
 }
 
 /* typing indicator CSS based on code by Joseph Fusco -> https://codepen.io/fusco/pen/XbpaYv */
