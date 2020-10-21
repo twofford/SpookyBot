@@ -103,20 +103,52 @@
     ], 
     "projects": [
         {
-            "title": "project name",
+            "title": "Project One",
             "summary": "a summary of project",
             "highlights": [
-                "highlight1", 
-                "highlight2", 
-                "highlight3"],
+                "I did this freature", 
+                "I did another feature", 
+                "I did a third feature"],
             "technologies": [
-                "tech1",
-                "tech2",
-                "tech3",
-                "tech4"
+                "JavaScript",
+                "React",
+                "D3.JS",
+                "MongoDB"
                 ],
-            "liveSite": "live site hyperlink",
-            "codeSource": "git link"
+            "liveSite": "https://google.com",
+            "codeSource": "https://github.com/twofford/SpookyBot"
+            },
+        {
+            "title": "Project Two",
+            "summary": "a summary of project",
+            "highlights": [
+                "I did this freature", 
+                "I did another feature", 
+                "I did a third feature"],
+            "technologies": [
+                "JavaScript",
+                "React",
+                "D3.JS",
+                "MongoDB"
+                ],
+            "liveSite": "https://google.com",
+            "codeSource": "https://github.com/twofford/SpookyBot"
+            },
+        {
+            "title": "Project Three",
+            "summary": "a summary of project",
+            "highlights": [
+                "I did this freature", 
+                "I did another feature", 
+                "I did a third feature"],
+            "technologies": [
+                "JavaScript",
+                "React",
+                "D3.JS",
+                "MongoDB"
+                ],
+            "liveSite": "https://google.com",
+            "codeSource": "https://github.com/twofford/SpookyBot"
             }
         ],
     "awards": [],
