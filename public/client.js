@@ -366,12 +366,12 @@ var Botkit = {
 
         that.contactCallToAction = document.getElementById('call_to_action_work');
         that.contactCallToAction.addEventListener('click', function () {
-            that.send('all jobs info');
+            that.send('work');
         });
 
         that.contactCallToAction = document.getElementById('call_to_action_skills');
         that.contactCallToAction.addEventListener('click', function () {
-            that.send('skills');
+            that.send('tech stack');
         });
 
         that.focus();
