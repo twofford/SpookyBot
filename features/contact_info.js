@@ -17,7 +17,12 @@ module.exports = function (controller) {
   allProfiles.forEach(profile => {
     const query = profile.network.toLowerCase();
     return controller.hears(new RegExp(query, 'i'), ['message'], async (bot, message) => {
-      await bot.reply(message, `Connect with ${firstName} on ${profile.hyperlink}`);
+      await bot.reply(message, { type: 'typing' });
+      setTimeout(async () => {
+        // will have to reset context because turn has now ended.
+        await bot.changeContext(message.reference);
+        await bot.reply(message, `Connect with ${firstName} on ${profile.hyperlink}`);
+      }, 1000);
     });
   });
   //Generates quick replies for network profiles
@@ -38,29 +43,63 @@ module.exports = function (controller) {
 
   //Bot listeners
   controller.hears('all contact info', ['message'], async (bot, message) => {
-    await bot.reply(message, `<p>Here are a few places where you can reach ${firstName}:</p><ul>${contactPhone ? `<li>Phone: ${contactPhone}</li>` : ''}<li>Email: ${contactEmail}</li>${contactAllProfiles ? contactAllProfiles : ''}${contactAddress !== '' ? `<li>Location: ${contactAddress} </li>` : ''}</ul><p>Hope you have a spooky good time connecting!</p>`);
-    await bot.cancelAllDialogs();
+    await bot.reply(message, { type: 'typing' });
+    setTimeout(async () => {
+      // will have to reset context because turn has now ended.
+      await bot.changeContext(message.reference);
+      await bot.reply(message, `<p>Here are a few places where you can reach ${firstName}:</p><ul>${contactPhone ? `<li>Phone: ${contactPhone}</li>` : ''}<li>Email: ${contactEmail}</li>${contactAllProfiles ? contactAllProfiles : ''}${contactAddress !== '' ? `<li>Location: ${contactAddress} </li>` : ''}</ul><p>Hope you have a spooky good time connecting!</p>`);
+    }, 1000);
   });
   controller.hears(new RegExp(/phone|call/i), ['message'], async (bot, message) => {
-    await bot.reply(message, contactPhone ? `Call or text ${firstName} at ${contactPhone}` : `Sorry ${firstName} does not share their phone number.`);
+    await bot.reply(message, { type: 'typing' });
+    setTimeout(async () => {
+      // will have to reset context because turn has now ended.
+      await bot.changeContext(message.reference);
+      await bot.reply(message, contactPhone ? `Call or text ${firstName} at ${contactPhone}` : `Sorry ${firstName} does not share their phone number.`);
+    }, 1000);
   });
   controller.hears(new RegExp(/email/i), ['message'], async (bot, message) => {
-    await bot.reply(message, contactEmail ? `Email ${firstName} at ${contactEmail}` : `Sorry ${firstName} does not share their email.`);
+    await bot.reply(message, { type: 'typing' });
+    setTimeout(async () => {
+      // will have to reset context because turn has now ended.
+      await bot.changeContext(message.reference);
+      await bot.reply(message, contactEmail ? `Email ${firstName} at ${contactEmail}` : `Sorry ${firstName} does not share their email.`);
+    }, 1000);
   });
   controller.hears(new RegExp(/address|live/i), ['message'], async (bot, message) => {
-    await bot.reply(message, contactAddress ? `${firstName} lives in ${contactAddress}. Trick or Treat!` : `Sorry ${firstName} does not share their address.`);
+    await bot.reply(message, { type: 'typing' });
+    setTimeout(async () => {
+      // will have to reset context because turn has now ended.
+      await bot.changeContext(message.reference);
+      await bot.reply(message, contactAddress ? `${firstName} lives in ${contactAddress}. Trick or Treat!` : `Sorry ${firstName} does not share their address.`);
+    }, 1000);
   });
   controller.hears(new RegExp('summary'), ['message'], async (bot, message) => {
     await bot.reply(message, `Certainly! Here\'s what ${firstName} has to say`);
-    await bot.reply(message, contactSummary);
+    await bot.reply(message, { type: 'typing' });
+    setTimeout(async () => {
+      // will have to reset context because turn has now ended.
+      await bot.changeContext(message.reference);
+      await bot.reply(message, contactSummary);
+    }, 1000);
   });
   controller.hears(new RegExp(`about ${firstName}`, 'i'), ['message'], async (bot, message) => {
     await bot.reply(message, `Certainly! Here\'s what ${firstName} has to say`);
-    await bot.reply(message, contactSummary);
+    await bot.reply(message, { type: 'typing' });
+    setTimeout(async () => {
+      // will have to reset context because turn has now ended.
+      await bot.changeContext(message.reference);
+      await bot.reply(message, contactSummary);
+    }, 1000);
   });
   controller.hears(new RegExp(`who is ${firstName}`, 'i'), ['message'], async (bot, message) => {
     await bot.reply(message, `Certainly! Here\'s what ${firstName} has to say`);
-    await bot.reply(message, contactSummary);
+    await bot.reply(message, { type: 'typing' });
+    setTimeout(async () => {
+      // will have to reset context because turn has now ended.
+      await bot.changeContext(message.reference);
+      await bot.reply(message, contactSummary);
+    }, 1000);
   });
 
 
