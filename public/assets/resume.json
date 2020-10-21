@@ -100,7 +100,25 @@
             "gpa": "",
             "courses": []
         }
-    ],
+    ], 
+    "projects": [
+        {
+            "title": "project name",
+            "summary": "a summary of project",
+            "highlights": [
+                "highlight1", 
+                "highlight2", 
+                "highlight3"],
+            "technologies": [
+                "tech1",
+                "tech2",
+                "tech3",
+                "tech4"
+                ],
+            "liveSite": "live site hyperlink",
+            "codeSource": "git link"
+            }
+        ],
     "awards": [],
     "publications": [],
     "skills": [{
@@ -234,6 +252,5 @@
         "fluency": "Native Speaker"
     }],
     "interests": [],
-    "references": [],
-    "projects": []
+    "references": []
 }
