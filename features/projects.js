@@ -4,14 +4,15 @@ const firstName = resume.basics.name.split(' ')[0]
 const { BotkitConversation } = require('botkit');
 
 module.exports = function (controller) {
-    const institutions = [];
-    const quick_replies_institutions = [];
 
-    resume.education.forEach(name => {
-        institutions.push(name.institution)
-        quick_replies_institutions.push({
-            title: `${name.institution}`,
-            payload: `${name.institution}`
+    const projectNames = [];
+    const quick_replies_projects = [];
+
+    resume.projects.forEach(name => {
+        projectNames.push(name.title)
+        quick_replies_projects.push({
+            title: `${name.title}`,
+            payload: `${name.title}`
         })
     });
 
