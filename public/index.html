@@ -5,25 +5,9 @@
         <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
         <link rel="stylesheet" href="/css/styles.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-
-          function showSkull() {
-            console.log('Show Skull is getting called')
-            const skull = document.getElementById("scary");
-            skull.style.display = "block";
-          }
-
-          function isSpooky(input) {
-            console.log(input)
-            input == "spooktacular" ? showSkull() : null;
-          }
-
-          document.getElementById("message-form").addEventListener("submit", console.log('Form submitted'));
-
-        </script>
     </head>
     <body >
-      <img id="scary" src="assets/skull.png"></div>
+      <img id="skull" src="assets/skull.png"></div>
       <div class="wrapper container">
         <img src="assets/ezgif.com-gif-maker.gif" />
         <div id="message_window">
@@ -65,7 +49,7 @@
             <div id="message_replies">
             </div>
             <footer>
-                <form id="message-form" onsubmit="return Botkit.send(Botkit.input.value, event)">
+                <form onsubmit="Botkit.send(Botkit.input.value, event)">
                     <input type="text" autocomplete="off" id="messenger_input" placeholder="Send a spooky message..." />
                     <button id="send-button" type="submit">Send</button>
                 </form>

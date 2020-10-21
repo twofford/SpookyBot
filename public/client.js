@@ -241,6 +241,20 @@ var Botkit = {
         }
         if (message.text) {
             message.html = converter.makeHtml(message.text);
+            if (message.text == 'spooktacular') {
+                
+                const scream = new Audio(
+                  "http://soundbible.com/mp3/Female_Scream_Horror-NeoPhyTe-138499973.mp3"
+                );
+                const skull = document.getElementById('skull');
+                scream.play();
+                skull.style.display = "block";
+                skull.classList.add("shake")
+                setTimeout(() => {
+                    skull.style.display = "none";
+                    skull.classList.remove("shake");
+                }, 2000);
+            }
         }
 
         that.next_line.innerHTML = that.message_template({
