@@ -6,7 +6,7 @@ module.exports = function (controller) {
   const returnUserDialog = new BotkitConversation("return_welcome", controller);
 
   newUserDialog.addMessage({
-    text: `💀: Hello there, I'm SpookyBot! I exist to tell you about ${resume.basics.name}. I see that this is your first time here. I know the following stuff about ${resume.basics.name}:`,
+    text: `💀: Hello there, I'm SpookyBot! I exist to tell you about ${resume.basics.name}. ${resume.basics.name} is in the job market! I see that this is your first time here. I know the following stuff about ${resume.basics.name}:`,
     quick_replies: [
       {
         title: "Contact",
@@ -18,19 +18,19 @@ module.exports = function (controller) {
       },
       {
         title: "Work",
-        payload: "work"
+        payload: "work",
       },
       {
         title: "Skills",
-        payload: "skills"
-      }
+        payload: "skills",
+      },
     ],
   });
 
   controller.addDialog(newUserDialog);
 
   returnUserDialog.say({
-    text: `💀: Welcome back! As you know, I'm SpookyBot. I exist to tell you about ${resume.basics.name}. I know the following stuff about ${resume.basics.name}:`,
+    text: `💀: Welcome back! As you know, I'm SpookyBot. I exist to tell you about ${resume.basics.name}. ${resume.basics.name} is in the job market! I know the following stuff about ${resume.basics.name}:`,
     quick_replies: [
       {
         title: "Contact",
@@ -61,17 +61,4 @@ module.exports = function (controller) {
       await bot.beginDialog("return_welcome")
   })
 
-//   controller.on("hello", async (bot, message) => {
-//     await bot.reply(
-//       message,
-//       `Hello there, I'm SpookyBot! I exist to tell you about ${resume.basics.name}. I see that this is your first time here. I know the following stuff about ${resume.basics.name}:`
-//     );
-//   });
-
-//   controller.on("welcome_back", async (bot, message) => {
-//     await bot.reply(
-//       message,
-//       `Welcome back! As you know, I'm SpookyBot. I exist to tell you about ${resume.basics.name}. I know the following stuff about ${resume.basics.name}:`
-//     );
-//   });
 };

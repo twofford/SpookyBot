@@ -105,127 +105,127 @@
     "publications": [],
     "skills": [{
             "name": "React.js",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "Redux.js",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "ES6",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "Writing",
-            "level": "",
+            "level": 10,
             "keywords": []
         },
         {
             "name": "jQuery",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "HTML",
-            "level": "",
+            "level": 5,
             "keywords": []
         },
         {
             "name": "Ruby on Rails",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "Webpack",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "MongoDB",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "Journalism",
-            "level": "",
+            "level": 10,
             "keywords": []
         },
         {
             "name": "D3.js",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "HTML5",
-            "level": "",
+            "level": 5,
             "keywords": []
         },
         {
             "name": "Express.js",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "Cascading Style Sheets (CSS)",
-            "level": "",
+            "level": 5,
             "keywords": []
         },
         {
             "name": "Editing",
-            "level": "",
+            "level": 10,
             "keywords": []
         },
         {
             "name": "Node.js",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "CSS3",
-            "level": "",
+            "level": 5,
             "keywords": []
         },
         {
             "name": "Google Maps API",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "SQL",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "JavaScript",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "Ruby",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "Mongoose",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "Feature Articles",
-            "level": "",
+            "level": 10,
             "keywords": []
         },
         {
             "name": "Heroku",
-            "level": "",
+            "level": 1,
             "keywords": []
         },
         {
             "name": "RSpec",
-            "level": "",
+            "level": 1,
             "keywords": []
         }
     ],

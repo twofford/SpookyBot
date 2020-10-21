@@ -16,17 +16,11 @@ module.exports = function (controller) {
             payload: `${name.institution}`
         })
     });
-
-    console.log(institutions)
-    console.log(quick_replies_institutions)
     
     resume.education.forEach(name => {
-        console.log(name)
         // let place = new RegExp(name.institution)
         let place = name.institution
-        console.log(place)
         let partial = name.institution.split(' ')[0]
-        console.log(partial)
         controller.hears(new RegExp(place,"i"), ['message'], async (bot, message) => {
             await bot.reply(message, `${firstName} attended ${name.institution} from 
             ${name.startDate} to ${name.endDate}. They pursued a ${name.studyType} for ${name.area}.`);
