@@ -353,27 +353,6 @@ var Botkit = {
 
         that.input = document.getElementById('messenger_input');
 
-        //Call to action buttons send a message by default on behalf of the user
-        that.contactCallToAction = document.getElementById('call_to_action_contact');
-        that.contactCallToAction.addEventListener('click', function () {
-            that.send('contact');
-        });
-
-        that.contactCallToAction = document.getElementById('call_to_action_education');
-        that.contactCallToAction.addEventListener('click', function () {
-            that.send('education');
-        });
-
-        that.contactCallToAction = document.getElementById('call_to_action_work');
-        that.contactCallToAction.addEventListener('click', function () {
-            that.send('work');
-        });
-
-        that.contactCallToAction = document.getElementById('call_to_action_skills');
-        that.contactCallToAction.addEventListener('click', function () {
-            that.send('tech stack');
-        });
-
         that.focus();
 
         that.on('connected', function () {
@@ -382,7 +361,7 @@ var Botkit = {
             that.sendEvent({
                 name: 'connected'
             });
-        })
+        });
 
         that.on('disconnected', function () {
             that.message_window.className = 'disconnected';
