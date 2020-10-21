@@ -9,13 +9,21 @@ module.exports = function (controller) {
     text: `💀: Hello there, I'm SpookyBot! I exist to tell you about ${resume.basics.name}. I see that this is your first time here. I know the following stuff about ${resume.basics.name}:`,
     quick_replies: [
       {
-        title: "Thing1",
-        payload: "thing1",
+        title: "Contact",
+        payload: "contact",
       },
       {
-        title: "Thing2",
-        payload: "thing2",
+        title: "Education",
+        payload: "education",
       },
+      {
+        title: "Work",
+        payload: "work"
+      },
+      {
+        title: "Skills",
+        payload: "skills"
+      }
     ],
   });
 
@@ -25,12 +33,20 @@ module.exports = function (controller) {
     text: `💀: Welcome back! As you know, I'm SpookyBot. I exist to tell you about ${resume.basics.name}. I know the following stuff about ${resume.basics.name}:`,
     quick_replies: [
       {
-        title: "Thing1",
-        payload: "thing1",
+        title: "Contact",
+        payload: "contact",
       },
       {
-        title: "Thing2",
-        payload: "thing2",
+        title: "Education",
+        payload: "education",
+      },
+      {
+        title: "Work",
+        payload: "work",
+      },
+      {
+        title: "Skills",
+        payload: "skills",
       },
     ],
   });
