@@ -420,6 +420,46 @@ a.button:hover {
 
 #send-button {
   color: white;
+  background-color: white;
+}
+
+#scary {
+  display: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-12px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(13px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(20px, 0, 0);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
