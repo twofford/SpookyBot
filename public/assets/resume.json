@@ -1,0 +1,239 @@
+{
+    "basics": {
+        "name": "Taylor Wofford",
+        "label": "Software Developer | Journalist",
+        "image": "",
+        "email": "taylor.wofford@gmail.com",
+        "phone": "",
+        "url": "https://www.taylorwofford.com",
+        "summary": "Software developer based in NYC who loves my dog, Trudy, my cat, Captain Ron, plus tacos and riding my bicycle around the city. No strong opinions on the Oxford comma. Big fan of React, Redux, and websites that look good and work well.",
+        "location": {
+            "address": "Brooklyn, New York",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "US",
+            "region": ""
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "taylor-wofford-931b3695",
+                "url": "https://www.linkedin.com/in/taylor-wofford-931b3695/"
+            },
+            {
+                "network": "Github",
+                "username": "twofford",
+                "url": "https://https://github.com/twofford"
+            }
+    ]
+    },
+    "work": [{
+            "name": "Freelance",
+            "endDate": "",
+            "highlights": [],
+            "position": "Software Engineer",
+            "startDate": "2020-05-31",
+            "url": ""
+        },
+        {
+            "name": "New York City Urban Debate League",
+            "endDate": "2020-01-31",
+            "highlights": [],
+            "position": "Program Manager",
+            "startDate": "2017-09-30",
+            "summary": "-Improved overall stakeholder satisfaction by 23% by implementing new programming policies based on data collected from stakeholders\n\n-Oversaw a $1 million programming budget\n\n-Managed a team of four",
+            "url": ""
+        },
+        {
+            "name": "Motherboard/VICE Media",
+            "endDate": "2018-09-30",
+            "highlights": [],
+            "position": "Contributor",
+            "startDate": "2017-04-30",
+            "summary": "- Wrote about tech, culture and their intersections",
+            "url": ""
+        },
+        {
+            "name": "Mic",
+            "endDate": "2018-09-30",
+            "highlights": [],
+            "position": "Writer",
+            "startDate": "2017-02-28",
+            "summary": "- Covered culture, politics and breaking news",
+            "url": ""
+        },
+        {
+            "name": "Quartz",
+            "endDate": "2018-09-30",
+            "highlights": [],
+            "position": "Contributor",
+            "startDate": "2016-09-30",
+            "summary": "- Covered business, tech and politics",
+            "url": ""
+        },
+        {
+            "name": "Newsweek",
+            "endDate": "2016-07-31",
+            "highlights": [],
+            "position": "Staff Writer",
+            "startDate": "2014-07-31",
+            "summary": "- Covered breaking news and politics",
+            "url": ""
+        }
+    ],
+    "volunteer": [],
+    "education": [{
+            "institution": "App Academy",
+            "area": "Software Engineering",
+            "studyType": "",
+            "startDate": "2020-12-31",
+            "endDate": "2020-12-31",
+            "gpa": "",
+            "courses": []
+        },
+        {
+            "institution": "The University of Kansas",
+            "area": "Journalism",
+            "studyType": "Bachelor of Science (B.S.)",
+            "startDate": "2005-12-31",
+            "endDate": "2010-12-31",
+            "gpa": "",
+            "courses": []
+        }
+    ],
+    "awards": [],
+    "publications": [],
+    "skills": [{
+            "name": "React.js",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Redux.js",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "ES6",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Writing",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "jQuery",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "HTML",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Ruby on Rails",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Webpack",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "MongoDB",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Journalism",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "D3.js",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "HTML5",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Express.js",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Cascading Style Sheets (CSS)",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Editing",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Node.js",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "CSS3",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Google Maps API",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "SQL",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "JavaScript",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Ruby",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Mongoose",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Feature Articles",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Heroku",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "RSpec",
+            "level": "",
+            "keywords": []
+        }
+    ],
+    "languages": [{
+        "language": "en",
+        "fluency": "Native Speaker"
+    }],
+    "interests": [],
+    "references": [],
+    "projects": []
+}
