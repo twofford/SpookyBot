@@ -8,7 +8,6 @@ module.exports = function(controller) {
 
     let typing = new BotkitConversation('typing', controller);
 
-    typing.say('I am going to type for a while now...');
     typing.addAction('typing');
 
     // start the typing indicator
