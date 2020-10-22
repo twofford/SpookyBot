@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body >
+      <img id="skull" src="assets/skull.png"></div>
       <div class="wrapper container">
         <div class="top">
           <img src="assets/ezgif.com-gif-maker.gif" />
@@ -34,37 +35,18 @@
                                 <a href="{{{message.open_link}}}" target="_blank" class="button_message">{{#if message.link_title}}{{message.link_title}}{{else}}{{message.open_link}}{{/if}}</a>
                               {{/if}}
                           </div>
-                          {{#message.files}}
-                            <div class="file_attachment">
-                            {{#if image}}
-                              <img src="{{{url}}}" alt="{{{url}}}" />
-                            {{else}}
-                              <a href="{{{url}}}" title="{{{url}}}">{{{url}}}</a>
-                            {{/if}}
-                            </div>
-                          {{/message.files}}
-                      </div>
-                  </div>
-              </section>
-              <div id="message_replies">
-              </div>
-              <footer>
-                  <form onsubmit="Botkit.send(Botkit.input.value, event)">
-                      <input type="text" autocomplete="off" id="messenger_input" placeholder="Send a spooky message..." />
-                      <button id="send-button" type="submit">Send</button>
-                  </form>
-                  <div id="call_to_action">
-                    <ul>
-                      <li><button id="call_to_action_contact">Contact</button></li>
-                      <li><button id="call_to_action_education">Education</button></li>
-                      <li><button id="call_to_action_work">Work</button></li>
-                      <li><button id="call_to_action_skills">Skills</button></li>
-                      <li><button id="call_to_action_projects">Projects</button></li>
-                    </ul>
-                  </div>
-              </footer>
-          </div>
-          <img src="assets/ezgif.com-gif-maker.gif" />
+                        {{/message.files}}
+                    </div>
+                </div>
+            </section>
+            <div id="message_replies">
+            </div>
+            <footer>
+                <form onsubmit="Botkit.send(Botkit.input.value, event)">
+                    <input type="text" autocomplete="off" id="messenger_input" placeholder="Send a spooky message..." />
+                    <button id="send-button" type="submit">Send</button>
+                </form>
+            </footer>
         </div>
         <div class="github">
           SpookyBot was made by Taylor Wofford, Jared Kaneshiro, and Ezra Schrage

@@ -304,40 +304,6 @@ a.button:hover {
   box-shadow: 0 0 0 1pt blue; 
 }
 
-#call_to_action {
-  display: flex;
-  justify-content: center;
-}
-
-#call_to_action ul {
-  list-style-type: none;
-  margin: 0px auto;
-  padding: 0;
-}
-#call_to_action ul li {
-  display: inline-block;
-  margin: 0.5rem;
-  margin-left: 0;
-}
-#call_to_action button {
-  text-decoration: none;
-  display: block;
-  border: 1px solid #a795ef;
-  color: #a795ef;
-  border-radius: 16px;
-  padding: 0.25rem 1rem;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
-}
-#call_to_action button:hover {
-  background: #a795ef;
-  color: #FFF;
-}
-#call_to_action button:focus {
-  box-shadow: 0 0 0 1pt blue; 
-}
-
 .work_history {
   padding-left: 0;
   color: #1a202c;
@@ -426,6 +392,46 @@ a.button:hover {
 
 #send-button {
   color: white;
+  background-color: white;
+}
+
+#skull {
+  display: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-12px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(13px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(20px, 0, 0);
+  }
 }
 
 .github {

@@ -241,6 +241,20 @@ var Botkit = {
         }
         if (message.text) {
             message.html = converter.makeHtml(message.text);
+            if (message.text == 'spooktacular') {
+                
+                const scream = new Audio(
+                  "http://soundbible.com/mp3/Female_Scream_Horror-NeoPhyTe-138499973.mp3"
+                );
+                const skull = document.getElementById('skull');
+                scream.play();
+                skull.style.display = "block";
+                skull.classList.add("shake")
+                setTimeout(() => {
+                    skull.style.display = "none";
+                    skull.classList.remove("shake");
+                }, 2000);
+            }
         }
 
         that.next_line.innerHTML = that.message_template({
@@ -345,31 +359,6 @@ var Botkit = {
 
         that.input = document.getElementById('messenger_input');
 
-        //Call to action buttons send a message by default on behalf of the user
-        that.contactCallToAction = document.getElementById('call_to_action_contact');
-        that.contactCallToAction.addEventListener('click', function () {
-            that.send('contact');
-        });
-
-        that.contactCallToAction = document.getElementById('call_to_action_education');
-        that.contactCallToAction.addEventListener('click', function () {
-            that.send('education');
-        });
-
-        that.contactCallToAction = document.getElementById('call_to_action_work');
-        that.contactCallToAction.addEventListener('click', function () {
-            that.send('work');
-        });
-
-        that.contactCallToAction = document.getElementById('call_to_action_skills');
-        that.contactCallToAction.addEventListener('click', function () {
-            that.send('tech stack');
-        });
-        that.contactCallToAction = document.getElementById('call_to_action_projects');
-        that.contactCallToAction.addEventListener('click', function () {
-            that.send('projects');
-        });
-
         that.focus();
 
         that.on('connected', function () {
@@ -378,7 +367,7 @@ var Botkit = {
             that.sendEvent({
                 name: 'connected'
             });
-        })
+        });
 
         that.on('disconnected', function () {
             that.message_window.className = 'disconnected';
