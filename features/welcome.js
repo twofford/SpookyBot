@@ -21,6 +21,10 @@ module.exports = function (controller) {
         payload: "work",
       },
       {
+        title: "Projects",
+        payload: "projects",
+      },
+      {
         title: "Skills",
         payload: "skills",
       },
@@ -43,6 +47,10 @@ module.exports = function (controller) {
       {
         title: "Work",
         payload: "work",
+      },
+      {
+        title: "Projects",
+        payload: "projects",
       },
       {
         title: "Skills",
