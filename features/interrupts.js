@@ -5,7 +5,7 @@ module.exports = function (controller) {
     controller.interrupts('help', 'message', async(bot, message) => {
         await bot.reply(
           message,
-          "💀: Hey, no problem! Let me take you back to the beginning."
+          "💀: By Skeleton Law, I am bound to assist you. Let me take you back to the beginning."
         );
         await bot.beginDialog("return_welcome");
     })

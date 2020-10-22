@@ -241,7 +241,7 @@ var Botkit = {
         }
         if (message.text) {
             message.html = converter.makeHtml(message.text);
-            if (message.text == 'spooktacular') {
+            if (message.text.toLowerCase() == 'spooktacular') {
                 
                 const scream = new Audio(
                   "http://soundbible.com/mp3/Female_Scream_Horror-NeoPhyTe-138499973.mp3"
