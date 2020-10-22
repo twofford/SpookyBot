@@ -8,11 +8,11 @@
         "url": "https://www.taylorwofford.com",
         "summary": "Software developer based in NYC who loves my dog, Trudy, my cat, Captain Ron, plus tacos and riding my bicycle around the city. No strong opinions on the Oxford comma. Big fan of React, Redux, and websites that look good and work well.",
         "location": {
-            "address": "Brooklyn, New York",
+            "address": "",
             "postalCode": "",
-            "city": "",
+            "city": "Brooklyn",
             "countryCode": "US",
-            "region": ""
+            "region": "New York"
         },
         "profiles": [
             {
