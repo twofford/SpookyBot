@@ -38,10 +38,10 @@
         {
             "name": "New York City Urban Debate League",
             "endDate": "2020-01-31",
-            "highlights": [],
+            "highlights": ["Improved overall stakeholder satisfaction by 23% by implementing new programming policies based on data collected from stakeholders","Oversaw a $1 million programming budget","Managed a team of four"],
             "position": "Program Manager",
             "startDate": "2017-09-30",
-            "summary": "-Improved overall stakeholder satisfaction by 23% by implementing new programming policies based on data collected from stakeholders\n\n-Oversaw a $1 million programming budget\n\n-Managed a team of four",
+            "summary": "Managed at team of debate coaches",
             "url": ""
         },
         {
@@ -50,7 +50,7 @@
             "highlights": [],
             "position": "Contributor",
             "startDate": "2017-04-30",
-            "summary": "- Wrote about tech, culture and their intersections",
+            "summary": "Wrote about tech, culture and their intersections",
             "url": ""
         },
         {
@@ -59,7 +59,7 @@
             "highlights": [],
             "position": "Writer",
             "startDate": "2017-02-28",
-            "summary": "- Covered culture, politics and breaking news",
+            "summary": "Covered culture, politics and breaking news",
             "url": ""
         },
         {
@@ -68,7 +68,7 @@
             "highlights": [],
             "position": "Contributor",
             "startDate": "2016-09-30",
-            "summary": "- Covered business, tech and politics",
+            "summary": "Covered business, tech and politics",
             "url": ""
         },
         {
@@ -77,7 +77,7 @@
             "highlights": [],
             "position": "Staff Writer",
             "startDate": "2014-07-31",
-            "summary": "- Covered breaking news and politics",
+            "summary": "Covered breaking news and politics",
             "url": ""
         }
     ],
@@ -235,5 +235,56 @@
     }],
     "interests": [],
     "references": [],
-    "projects": []
+    "projects": [
+        {
+            "title": "Mask",
+            "summary": "a summary of project",
+            "highlights": [
+                "I did this freature",
+                "I did another feature",
+                "I did a third feature"
+            ],
+            "technologies": [
+                "JavaScript",
+                "React",
+                "D3.JS",
+                "MongoDB"
+            ],
+            "liveSite": "https://google.com",
+            "codeSource": "https://github.com/twofford/SpookyBot"
+        },
+        {
+            "title": "COVID",
+            "summary": "a summary of project",
+            "highlights": [
+                "I did this freature",
+                "I did another feature",
+                "I did a third feature"
+            ],
+            "technologies": [
+                "JavaScript",
+                "React",
+                "D3.JS",
+                "MongoDB"
+            ],
+            "liveSite": "https://google.com",
+            "codeSource": "https://github.com/twofford/SpookyBot"
+        },
+        {
+            "title": "Dungeon",
+            "summary": "a summary of projecta summary of projeca summary of projeca summary of projeca summary of projeca summary of projeca summary of projeca summary of projec",
+            "highlights": [
+                "I did this freaturea summary of projeca summary of projeca summary of projeca summary of projeca summary of projec",
+                "I did another feature",
+                "I did a third featura summary of projeca summary of projeca summary of projeca summary of projeca summary of projeca summary of projece"
+            ],
+            "technologies": [
+                "JavaScript",
+                "React",
+                "D3.JS",
+                "MongoDB"
+            ],
+            "liveSite": "https://google.com",
+            "codeSource": "https://github.com/twofford/SpookyBot"
+    }]
 }

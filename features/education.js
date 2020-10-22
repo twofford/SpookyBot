@@ -10,24 +10,36 @@ module.exports = function (controller) {
     const quick_replies_institutions = [];
     
     resume.education.forEach(name => {
-        institutions.push(name.institution)
-        quick_replies_institutions.push({
-            title: `${name.institution}`,
-            payload: `${name.institution}`
-        })
-    });
-    
-    resume.education.forEach(name => {
         // let place = new RegExp(name.institution)
         let place = name.institution
         let partial = name.institution.split(' ')[0]
         controller.hears(new RegExp(place,"i"), ['message'], async (bot, message) => {
-            await bot.reply(message, `${firstName} attended ${name.institution} from 
-            ${name.startDate} to ${name.endDate}. They pursued a ${name.studyType} for ${name.area}.`);
+            await bot.reply(message, { type: "typing" });
+            setTimeout(async () => {
+              // will have to reset context because turn has now ended.
+              await bot.changeContext(message.reference);
+                await bot.reply(message, `${firstName} attended ${name.institution} from 
+                ${name.startDate} to ${name.endDate}. They pursued a ${name.studyType} for ${name.area}.`);
+            }, 1000);
         });
         controller.hears(new RegExp(partial,"i"), ['message'], async (bot, message) => {
-            await bot.reply(message, `${firstName} attended ${name.institution} from 
-            ${name.startDate} to ${name.endDate}. They pursued a ${name.studyType} for ${name.area}.`);
+
+
+            await bot.reply(message, { type: "typing" });
+            setTimeout(async () => {
+              // will have to reset context because turn has now ended.
+              await bot.changeContext(message.reference);
+            await bot.reply(
+              message,
+              `${firstName} attended ${name.institution} from 
+            ${name.startDate} to ${name.endDate}. They pursued a ${name.studyType} for ${name.area}.`
+            );
+            }, 1000);
+        });
+
+        quick_replies_institutions.push({
+          title: `${name.institution}`,
+          payload: `${name.institution}`,
         });
     });
 
@@ -37,8 +49,6 @@ module.exports = function (controller) {
             quick_replies: quick_replies_institutions
         })
     });
-
-    const educationInfo = new BotkitConversation('educationInfo', controller);
 
 
 };
