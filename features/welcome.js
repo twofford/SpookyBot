@@ -24,6 +24,10 @@ module.exports = function (controller) {
         title: "Skills",
         payload: "skills",
       },
+      {
+        title: "Projects",
+        payload: "projects",
+      }
     ],
   });
 
@@ -47,6 +51,10 @@ module.exports = function (controller) {
       {
         title: "Skills",
         payload: "skills",
+      },
+      {
+        title: "Projects",
+        payload: "projects",
       },
     ],
   });

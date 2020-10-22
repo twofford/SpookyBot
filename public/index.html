@@ -9,38 +9,31 @@
     <body >
       <img id="skull" src="assets/skull.png"></div>
       <div class="wrapper container">
-        <img src="assets/ezgif.com-gif-maker.gif" />
-        <div id="message_window">
-            <div class="disconnected">
-                You're disconnected...trying to reconnect.
-            </div>
-            <div class="offline">
-                You're offline. Refresh your browser to connect!
-            </div>
-            <section>
-                <div id="message_list">
-                    <div id="message_template">
-                        <div class="message {{message.type}}">
-                            {{#if message.isTyping}}
-                              <div class="typing-indicator">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                              </div>
-                            {{/if}}
-                            {{{message.html}}}
+        <div class="top">
+          <img src="assets/ezgif.com-gif-maker.gif" />
+          <div id="message_window">
+              <div class="disconnected">
+                  You're disconnected...trying to reconnect.
+              </div>
+              <div class="offline">
+                  You're offline. Refresh your browser to connect!
+              </div>
+              <section>
+                  <div id="message_list">
+                      <div id="message_template">
+                          <div class="message {{message.type}}">
+                              {{#if message.isTyping}}
+                                <div class="typing-indicator">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                </div>
+                              {{/if}}
+                              {{{message.html}}}
 
-                            {{#if message.open_link}}
-                              <a href="{{{message.open_link}}}" target="_blank" class="button_message">{{#if message.link_title}}{{message.link_title}}{{else}}{{message.open_link}}{{/if}}</a>
-                            {{/if}}
-                        </div>
-                        {{#message.files}}
-                          <div class="file_attachment">
-                          {{#if image}}
-                            <img src="{{{url}}}" alt="{{{url}}}" />
-                          {{else}}
-                            <a href="{{{url}}}" title="{{{url}}}">{{{url}}}</a>
-                          {{/if}}
+                              {{#if message.open_link}}
+                                <a href="{{{message.open_link}}}" target="_blank" class="button_message">{{#if message.link_title}}{{message.link_title}}{{else}}{{message.open_link}}{{/if}}</a>
+                              {{/if}}
                           </div>
                         {{/message.files}}
                     </div>
@@ -55,8 +48,13 @@
                 </form>
             </footer>
         </div>
-        <img src="assets/ezgif.com-gif-maker.gif" />
+        <div class="github">
+          SpookyBot was made by Taylor Wofford, Jared Kaneshiro, and Ezra Schrage
+          <a href="https://github.com/twofford/SpookyBot" target="_blank" rel="noopener noreferrer">
+            <img class="icon" src="/assets/github_light.png">
+          </a>
         </div>
+      </div>
         <script src="/client.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
           integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -65,4 +63,7 @@
           integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
     </body>
+    <footer>
+      
+    </footer>
 </html>
