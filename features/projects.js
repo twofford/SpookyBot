@@ -29,9 +29,12 @@ module.exports = function (controller) {
         let projectLiveSite = `<a href="${project.liveSite}" target="_blank">Live Site</a>`;
         let highlights = project.highlights.map((highlight) => `<li>${highlight}</li>`).join("");
 
-        let projectMarkup = `<li><div><div><h2>${project.title}</h2></div>${
+        let projectMarkup = `<div><h2>${project.title}</h2>${
           project.summary ? `<p>${project.summary}</p>` : ""
-        }${highlights.length > 0 ? `<ul>${highlights}</ul>` : ""}</div></li>`;
+        }${
+          highlights.length > 0 ? `<h4>Features</h4><ul>${highlights}</ul><br>` : ""
+        }
+        <p>${projectLiveSite}</p><p>${projectGithub}</p></div>`;
 
         controller.hears(new RegExp(projectName, "i"), ['message'], async (bot, message) => {
             await bot.reply(message, `<ul class="project_history">${projectMarkup}</ul>`);
