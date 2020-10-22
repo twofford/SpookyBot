@@ -100,57 +100,7 @@
             "gpa": "",
             "courses": []
         }
-    ], 
-    "projects": [
-        {
-            "title": "Mask",
-            "summary": "a summary of project",
-            "highlights": [
-                "I did this freature", 
-                "I did another feature", 
-                "I did a third feature"],
-            "technologies": [
-                "JavaScript",
-                "React",
-                "D3.JS",
-                "MongoDB"
-                ],
-            "liveSite": "https://google.com",
-            "codeSource": "https://github.com/twofford/SpookyBot"
-            },
-        {
-            "title": "COVID",
-            "summary": "a summary of project",
-            "highlights": [
-                "I did this freature", 
-                "I did another feature", 
-                "I did a third feature"],
-            "technologies": [
-                "JavaScript",
-                "React",
-                "D3.JS",
-                "MongoDB"
-                ],
-            "liveSite": "https://google.com",
-            "codeSource": "https://github.com/twofford/SpookyBot"
-            },
-        {
-            "title": "Dungeon",
-            "summary": "a summary of projecta summary of projeca summary of projeca summary of projeca summary of projeca summary of projeca summary of projeca summary of projec",
-            "highlights": [
-                "I did this freaturea summary of projeca summary of projeca summary of projeca summary of projeca summary of projec", 
-                "I did another feature", 
-                "I did a third featura summary of projeca summary of projeca summary of projeca summary of projeca summary of projeca summary of projece"],
-            "technologies": [
-                "JavaScript",
-                "React",
-                "D3.JS",
-                "MongoDB"
-                ],
-            "liveSite": "https://google.com",
-            "codeSource": "https://github.com/twofford/SpookyBot"
-            }
-        ],
+    ],
     "awards": [],
     "publications": [],
     "skills": [{
@@ -284,5 +234,6 @@
         "fluency": "Native Speaker"
     }],
     "interests": [],
-    "references": []
+    "references": [],
+    "projects": []
 }
