@@ -103,7 +103,7 @@
     ], 
     "projects": [
         {
-            "title": "Project One",
+            "title": "Mask",
             "summary": "a summary of project",
             "highlights": [
                 "I did this freature", 
@@ -119,7 +119,7 @@
             "codeSource": "https://github.com/twofford/SpookyBot"
             },
         {
-            "title": "Project Two",
+            "title": "COVID",
             "summary": "a summary of project",
             "highlights": [
                 "I did this freature", 
@@ -135,7 +135,7 @@
             "codeSource": "https://github.com/twofford/SpookyBot"
             },
         {
-            "title": "Project Three",
+            "title": "Dungeon",
             "summary": "a summary of project",
             "highlights": [
                 "I did this freature", 

@@ -365,6 +365,10 @@ var Botkit = {
         that.contactCallToAction.addEventListener('click', function () {
             that.send('tech stack');
         });
+        that.contactCallToAction = document.getElementById('call_to_action_projects');
+        that.contactCallToAction.addEventListener('click', function () {
+            that.send('projects');
+        });
 
         that.focus();
 
