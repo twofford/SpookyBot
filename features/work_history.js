@@ -25,12 +25,17 @@ module.exports = function (controller) {
       'formattedEnd': formattedEnd,
     };
   });
-  //Generate a bot listener for each job company
+  //Generate a bot listener for each job position
   allJobs.forEach(job => {
     const position = job.position.toLowerCase();
 
     return controller.hears(new RegExp(position, 'i'), ['message'], async (bot, message) => {
-      await bot.reply(message, job.markupShort);
+      await bot.reply(message, { type: 'typing' });
+      setTimeout(async () => {
+        // will have to reset context because turn has now ended.
+        await bot.changeContext(message.reference);
+        await bot.reply(message, job.markupShort);
+      }, 1000);
     });
   });
   //Generates quick replies for each job
@@ -40,35 +45,18 @@ module.exports = function (controller) {
 
   //Bot listeners
   controller.hears('all jobs info', ['message'], async (bot, message) => {
-    await bot.reply(message, `<ul class="work_history">${allJobs.map(job => job.markupLong).join('')}</ul>`);
+    await bot.reply(message, { type: 'typing' });
+    setTimeout(async () => {
+      // will have to reset context because turn has now ended.
+      await bot.changeContext(message.reference);
+      await bot.reply(message, `<ul class="work_history">${allJobs.map(job => job.markupLong).join('')}</ul>`);
+    }, 1000);
   });
 
   //Creates an instance of a conversation for dialog tree
   const workHistory = new BotkitConversation('workHistory', controller);
 
-  // create a path for when a user says YES
-  workHistory.addMessage({
-    text: 'Happy to help! Please select from one of these work history options:',
-    quick_replies: [
-      {
-        title: "All",
-        payload: "all jobs info",
-      },
-    ].concat(jobQuickReplies)
-  }, 'yes_thread');
-
-  // create a path for when a user says NO
-  workHistory.addMessage({
-    text: 'Oh Okay. No problem. Thanks for visiting the site!',
-  }, 'no_thread');
-
-  // create a path where neither option was matched
-  // this message has an action field, which directs botkit to go back to the `default` thread after sending this message.
-  workHistory.addMessage({
-    text: 'Sorry I did not understand.',
-    action: 'default',
-  }, 'bad_response');
-
+  // collect a value with conditional actions
   workHistory.ask({
     text: `Would you like to learn more about ${firstName}'s work history?`,
     quick_replies: [
@@ -101,6 +89,29 @@ module.exports = function (controller) {
       },
     }
   ], 'workHistory', 'default');
+
+  // create a path for when a user says YES
+  workHistory.addMessage({
+    text: 'Happy to help! Please select from one of these work history options:',
+    quick_replies: [
+      {
+        title: "All",
+        payload: "all jobs info",
+      },
+    ].concat(jobQuickReplies)
+  }, 'yes_thread');
+
+  // create a path for when a user says NO
+  workHistory.addMessage({
+    text: 'Oh Okay. No problem. Thanks for visiting the site!',
+  }, 'no_thread');
+
+  // create a path where neither option was matched
+  // this message has an action field, which directs botkit to go back to the `default` thread after sending this message.
+  workHistory.addMessage({
+    text: 'Sorry I did not understand.',
+    action: 'default',
+  }, 'bad_response');
 
   controller.addDialog(workHistory);
   controller.hears(new RegExp(/work|job|resume|resumé|employer|employee/i), ['message', 'direct_message'], async (bot, message) => {
