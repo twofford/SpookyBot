@@ -21,7 +21,19 @@ module.exports = function (controller) {
         <p>${projectLiveSite}</p><p>${projectGithub}</p></div>`;
 
         controller.hears(new RegExp(projectName, "i"), ['message'], async (bot, message) => {
-            await bot.reply(message, `<ul class="project_history">${projectMarkup}</ul>`);
+
+
+            await bot.reply(message, { type: "typing" });
+            setTimeout(async () => {
+              // will have to reset context because turn has now ended.
+              await bot.changeContext(message.reference);
+                await bot.reply(message, `<ul class="project_history">${projectMarkup}</ul>`);
+                }, 1000);
+
+
+
+
+            
         });
 
         quick_replies_projects.push({
