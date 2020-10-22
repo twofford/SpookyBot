@@ -24,24 +24,15 @@ module.exports = function (controller) {
     }
   })
 
-  controller.hears("skills", "message", async (bot, message) => {
-    await bot.reply(
-      message,
-      `${resume.basics.name} knows the following stuff: ${skillsStr}`
-    );
-  });
-
-  controller.hears("tech", "message", async (bot, message) => {
-    await bot.reply(
-      message,
-      `${resume.basics.name} knows the following stuff: ${skillsStr}`
-    );
-  });
-
-  controller.hears("stack", "message", async (bot, message) => {
-    await bot.reply(
-      message,
-      `${resume.basics.name} knows the following stuff: ${skillsStr}`
-    );
+  controller.hears(/skills|tech|stack/i, "message", async (bot, message) => {
+    await bot.reply(message, { type: 'typing' });
+    setTimeout(async () => {
+      // will have to reset context because turn has now ended.
+      await bot.changeContext(message.reference);
+      await bot.reply(
+        message,
+        `${resume.basics.name} knows the following stuff: ${skillsStr}`
+      );
+    }, 1000);
   });
 };
